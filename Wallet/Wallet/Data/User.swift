@@ -7,13 +7,32 @@
 
 import Foundation
 import UIKit
+import Combine
 
-class User {
-
-    var transfers: [Transfer] = [
-        Transfer(date: Date(), amount: 0.56, locale: .current, destination: "Amazon", icon: UIImage(systemName: "bag")!),
-        Transfer(date: Date(), amount: 3.52, locale: .current, destination: "Public Transport", icon: UIImage(systemName: "train.side.front.car")!)
-    ]
+class User: ObservableObject {
 
     static let shared = User()
+
+    @Published var transfers: [Transfer] = []
+
+    private let dataProvider = DataProvider()
+    private var cancellables = Set<AnyCancellable>()
+
+    func populateTransfers() {
+        dataProvider
+            .transfersPublisher
+            .replaceError(with: [])
+            .sink { transferDTOs in
+                self.transfers = transferDTOs.map{ dto in
+                    Transfer(
+                        date: Date(),
+                        amount: Double(dto.price) ?? 0.0,
+                        locale: .current,
+                        destination: dto.destination,
+                        icon: UIImage(systemName: "bag")!
+                    )
+                }
+            }
+            .store(in: &cancellables)
+    }
 }

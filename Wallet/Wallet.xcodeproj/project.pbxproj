@@ -20,6 +20,8 @@
 		9F79AB3E29A8EFE600DD6787 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB3D29A8EFE600DD6787 /* Transfer.swift */; };
 		9F79AB4029A8F08F00DD6787 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB3F29A8F08F00DD6787 /* User.swift */; };
 		9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4129A8F1F800DD6787 /* TransferCell.swift */; };
+		9F79AB4429A8FBD900DD6787 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4329A8FBD900DD6787 /* DataProvider.swift */; };
+		9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4529A90A9500DD6787 /* TransferDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		9F79AB3D29A8EFE600DD6787 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		9F79AB3F29A8F08F00DD6787 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F79AB4129A8F1F800DD6787 /* TransferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCell.swift; sourceTree = "<group>"; };
+		9F79AB4329A8FBD900DD6787 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		9F79AB4529A90A9500DD6787 /* TransferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			children = (
 				9F79AB3D29A8EFE600DD6787 /* Transfer.swift */,
 				9F79AB3F29A8F08F00DD6787 /* User.swift */,
+				9F79AB4329A8FBD900DD6787 /* DataProvider.swift */,
+				9F79AB4529A90A9500DD6787 /* TransferDTO.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -295,8 +301,10 @@
 				9F79AB3A29A8EE4200DD6787 /* CardsView.swift in Sources */,
 				9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */,
 				9F79AB3829A8EE2A00DD6787 /* TransferView.swift in Sources */,
+				9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */,
 				9F79AB0C29A8E5FD00DD6787 /* WalletApp.swift in Sources */,
 				9F79AB3E29A8EFE600DD6787 /* Transfer.swift in Sources */,
+				9F79AB4429A8FBD900DD6787 /* DataProvider.swift in Sources */,
 				9F79AB3629A8EBCD00DD6787 /* HomeView.swift in Sources */,
 				9F79AB4029A8F08F00DD6787 /* User.swift in Sources */,
 			);
