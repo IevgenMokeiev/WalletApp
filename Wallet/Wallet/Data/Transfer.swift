@@ -24,7 +24,21 @@ struct Transfer: Identifiable {
         return formatter
     }()
 
+    private static var currencyFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+
+        return formatter
+    }()
+
     var formattedDate: String {
         return Self.dateFormatter.string(from: date)
+    }
+
+    var formattedAmount: String {
+        let formatter = Self.currencyFormatter
+        formatter.locale = locale
+
+        return formatter.string(from: amount as NSNumber) ?? ""
     }
 }

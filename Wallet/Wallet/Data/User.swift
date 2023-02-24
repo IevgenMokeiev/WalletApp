@@ -22,6 +22,7 @@ class User: ObservableObject {
         dataProvider
             .transfersPublisher
             .replaceError(with: [])
+            .receive(on: RunLoop.main)
             .sink { transferDTOs in
                 self.transfers = transferDTOs.map{ dto in
                     Transfer(

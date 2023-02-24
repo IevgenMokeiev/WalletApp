@@ -18,14 +18,17 @@ struct TransferCell: View {
     var body: some View {
         HStack {
             Image(uiImage: transfer.icon)
-                .aspectRatio(1, contentMode: .fit)
-            VStack {
+                .resizable()
+                .frame(width: 40, height: 40)
+            VStack(alignment: .leading) {
                 Text(transfer.destination)
-                Text(transfer.formattedDate)
+                Text(transfer.formattedAmount)
             }
+            .multilineTextAlignment(.leading)
             Spacer()
-            Text("\(transfer.amount)")
+            Text("- \(transfer.formattedAmount)")
+                .foregroundColor(.red)
+                .multilineTextAlignment(.trailing)
         }
-        .padding()
     }
 }
