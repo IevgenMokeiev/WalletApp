@@ -22,6 +22,7 @@
 		9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4129A8F1F800DD6787 /* TransferCell.swift */; };
 		9F79AB4429A8FBD900DD6787 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4329A8FBD900DD6787 /* DataProvider.swift */; };
 		9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4529A90A9500DD6787 /* TransferDTO.swift */; };
+		9FC0B33529BB8CE500AF7F89 /* TransferGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0B33429BB8CE500AF7F89 /* TransferGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9F79AB4129A8F1F800DD6787 /* TransferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCell.swift; sourceTree = "<group>"; };
 		9F79AB4329A8FBD900DD6787 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		9F79AB4529A90A9500DD6787 /* TransferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDTO.swift; sourceTree = "<group>"; };
+		9FC0B33429BB8CE500AF7F89 /* TransferGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				9F79AB3D29A8EFE600DD6787 /* Transfer.swift */,
+				9FC0B33429BB8CE500AF7F89 /* TransferGroup.swift */,
 				9F79AB3F29A8F08F00DD6787 /* User.swift */,
 				9F79AB4329A8FBD900DD6787 /* DataProvider.swift */,
 				9F79AB4529A90A9500DD6787 /* TransferDTO.swift */,
@@ -302,6 +305,7 @@
 				9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */,
 				9F79AB3829A8EE2A00DD6787 /* TransferView.swift in Sources */,
 				9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */,
+				9FC0B33529BB8CE500AF7F89 /* TransferGroup.swift in Sources */,
 				9F79AB0C29A8E5FD00DD6787 /* WalletApp.swift in Sources */,
 				9F79AB3E29A8EFE600DD6787 /* Transfer.swift in Sources */,
 				9F79AB4429A8FBD900DD6787 /* DataProvider.swift in Sources */,

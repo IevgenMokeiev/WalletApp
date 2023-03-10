@@ -26,7 +26,7 @@ class User: ObservableObject {
             .sink { transferDTOs in
                 self.transfers = transferDTOs.map{ dto in
                     Transfer(
-                        date: Date(),
+                        date: self.randomDate(dayRange: 22..<25),
                         amount: Double(dto.price) ?? 0.0,
                         locale: .current,
                         destination: dto.destination,
@@ -35,5 +35,28 @@ class User: ObservableObject {
                 }
             }
             .store(in: &cancellables)
+    }
+
+    func groupTransfers() -> [TransferGroup] {
+        var groups = [TransferGroup]()
+        let dates = Array(Set(transfers.map { $0.date }))
+        dates.forEach { date in
+            let transfers = transfers.filter { $0.date == date }
+            let group = TransferGroup(date: date, transfers: transfers)
+            groups.append(group)
+        }
+        return groups
+    }
+
+    private func randomDate(dayRange: Range<Int>) -> Date {
+        let gregorian = Calendar(identifier: .gregorian)
+        let now = Date()
+        var components = gregorian.dateComponents([.day, .hour, .minute], from: now)
+
+        components.day = Int.random(in: dayRange)
+        components.hour = Int.random(in: 0..<24)
+        components.minute = Int.random(in: 0..<60)
+
+        return gregorian.date(from: components) ?? Date()
     }
 }

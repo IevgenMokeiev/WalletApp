@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-struct Transfer: Identifiable {
-
+struct Transfer: Identifiable, Comparable {
     let id = UUID()
     let date: Date
     let amount: Double
@@ -40,5 +39,9 @@ struct Transfer: Identifiable {
         formatter.locale = locale
 
         return formatter.string(from: amount as NSNumber) ?? ""
+    }
+
+    static func < (lhs: Transfer, rhs: Transfer) -> Bool {
+        return lhs.date < rhs.date
     }
 }
