@@ -39,9 +39,17 @@ class User: ObservableObject {
 
     func groupTransfers() -> [TransferGroup] {
         var groups = [TransferGroup]()
-        let dates = Array(Set(transfers.map { $0.date }))
-        dates.forEach { date in
-            let transfers = transfers.filter { $0.date == date }
+        let dates = transfers.map { $0.date }
+
+        var uniqueDates = [Date]()
+        for date in dates {
+            if !uniqueDates.contains(where: { Calendar.current.isDate($0, equalTo: date, toGranularity: .day) }) {
+                uniqueDates.append(date)
+            }
+        }
+
+        uniqueDates.forEach { date in
+            let transfers = transfers.filter { Calendar.current.isDate($0.date, equalTo: date, toGranularity: .day)  }
             let group = TransferGroup(date: date, transfers: transfers)
             groups.append(group)
         }
