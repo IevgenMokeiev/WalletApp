@@ -59,8 +59,10 @@ class User: ObservableObject {
     private func randomDate(dayRange: Range<Int>) -> Date {
         let gregorian = Calendar(identifier: .gregorian)
         let now = Date()
-        var components = gregorian.dateComponents([.day, .hour, .minute], from: now)
+        var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute], from: now)
 
+        components.year = 2023
+        components.month = 12
         components.day = Int.random(in: dayRange)
         components.hour = Int.random(in: 0..<24)
         components.minute = Int.random(in: 0..<60)

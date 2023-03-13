@@ -22,7 +22,9 @@ struct TransferCell: View {
                 .frame(width: 40, height: 40)
             VStack(alignment: .leading) {
                 Text(transfer.destination)
-                Text(transfer.formattedAmount)
+                HStack {
+                    Text(transfer.formattedDate)
+                }
             }
             .multilineTextAlignment(.leading)
             Spacer()

@@ -13,7 +13,8 @@ struct TransferGroup: Comparable {
 
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YY/MM/dd"
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
 
         return formatter
     }()

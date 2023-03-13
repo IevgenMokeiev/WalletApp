@@ -18,7 +18,8 @@ struct Transfer: Identifiable, Comparable {
 
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YY/MM/dd"
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
 
         return formatter
     }()
