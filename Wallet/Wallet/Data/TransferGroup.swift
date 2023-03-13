@@ -8,16 +8,11 @@
 import Foundation
 
 struct TransferGroup: Comparable {
-    let date: Date
     let transfers: [Transfer]
 
-    private static var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-
-        return formatter
-    }()
+    var date: Date {
+        return transfers.first?.date ?? Date()
+    }
 
     var formattedDate: String {
         return Self.dateFormatter.string(from: date)
@@ -26,4 +21,14 @@ struct TransferGroup: Comparable {
     static func < (lhs: TransferGroup, rhs: TransferGroup) -> Bool {
         return lhs.date < rhs.date
     }
+
+    // MARK: - Private
+
+    private static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+
+        return formatter
+    }()
 }

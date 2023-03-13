@@ -24,6 +24,7 @@ struct TransferCell: View {
                 Text(transfer.destination)
                 HStack {
                     Text(transfer.formattedDate)
+                        .foregroundColor(.gray)
                 }
             }
             .multilineTextAlignment(.leading)
