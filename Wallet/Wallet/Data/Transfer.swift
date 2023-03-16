@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum TransferStatus: String, CaseIterable {
+    case pending = "Pending"
+    case completed = "Completed"
+}
+
 struct Transfer: Identifiable, Comparable {
     let id = UUID()
     let date: Date
@@ -15,6 +20,7 @@ struct Transfer: Identifiable, Comparable {
     let locale: Locale
     let destination: String
     let icon: UIImage
+    let status: TransferStatus
 
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

@@ -12,8 +12,6 @@
 		9F79AB1029A8E5FE00DD6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F79AB0F29A8E5FE00DD6787 /* Assets.xcassets */; };
 		9F79AB1329A8E5FE00DD6787 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F79AB1229A8E5FE00DD6787 /* Preview Assets.xcassets */; };
 		9F79AB1D29A8E5FF00DD6787 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB1C29A8E5FF00DD6787 /* WalletTests.swift */; };
-		9F79AB2729A8E5FF00DD6787 /* WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB2629A8E5FF00DD6787 /* WalletUITests.swift */; };
-		9F79AB2929A8E5FF00DD6787 /* WalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB2829A8E5FF00DD6787 /* WalletUITestsLaunchTests.swift */; };
 		9F79AB3629A8EBCD00DD6787 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB3529A8EBCD00DD6787 /* HomeView.swift */; };
 		9F79AB3829A8EE2A00DD6787 /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB3729A8EE2A00DD6787 /* TransferView.swift */; };
 		9F79AB3A29A8EE4200DD6787 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB3929A8EE4200DD6787 /* CardsView.swift */; };
@@ -52,8 +50,6 @@
 		9F79AB1829A8E5FF00DD6787 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F79AB1C29A8E5FF00DD6787 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
 		9F79AB2229A8E5FF00DD6787 /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F79AB2629A8E5FF00DD6787 /* WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITests.swift; sourceTree = "<group>"; };
-		9F79AB2829A8E5FF00DD6787 /* WalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F79AB3529A8EBCD00DD6787 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9F79AB3729A8EE2A00DD6787 /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
 		9F79AB3929A8EE4200DD6787 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -96,7 +92,6 @@
 			children = (
 				9F79AB0A29A8E5FD00DD6787 /* Wallet */,
 				9F79AB1B29A8E5FF00DD6787 /* WalletTests */,
-				9F79AB2529A8E5FF00DD6787 /* WalletUITests */,
 				9F79AB0929A8E5FD00DD6787 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,15 +133,6 @@
 				9F79AB1C29A8E5FF00DD6787 /* WalletTests.swift */,
 			);
 			path = WalletTests;
-			sourceTree = "<group>";
-		};
-		9F79AB2529A8E5FF00DD6787 /* WalletUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9F79AB2629A8E5FF00DD6787 /* WalletUITests.swift */,
-				9F79AB2829A8E5FF00DD6787 /* WalletUITestsLaunchTests.swift */,
-			);
-			path = WalletUITests;
 			sourceTree = "<group>";
 		};
 		9F79AB3B29A8EE9900DD6787 /* UI */ = {
@@ -338,8 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F79AB2729A8E5FF00DD6787 /* WalletUITests.swift in Sources */,
-				9F79AB2929A8E5FF00DD6787 /* WalletUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

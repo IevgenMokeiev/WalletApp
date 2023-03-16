@@ -43,7 +43,13 @@ class User: ObservableObject {
             amount: Double(dto.price) ?? 0.0,
             locale: .current,
             destination: dto.destination,
-            icon: UIImage(systemName: "bag")!
+            icon: [
+                UIImage(systemName: "bag")!,
+                UIImage(systemName: "transmission")!,
+                UIImage(systemName: "house")!,
+                UIImage(systemName: "car")!
+            ].randomElement()!,
+            status: TransferStatus.allCases.randomElement()!
         )
     }
 }

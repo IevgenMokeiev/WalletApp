@@ -24,8 +24,10 @@ struct TransferCell: View {
                 Text(transfer.destination)
                 HStack {
                     Text(transfer.formattedDate)
-                        .foregroundColor(.gray)
+                    Text(" | ")
+                    Text(transfer.status.rawValue)
                 }
+                .foregroundColor(.gray)
             }
             .multilineTextAlignment(.leading)
             Spacer()
