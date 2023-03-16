@@ -23,8 +23,15 @@ class User: ObservableObject {
         return Self.dateFormatter.string(from: date)
     }
 
-    var groupedTransfers: [TransferGroup] {
+    var dateGroups: [TransferGroup] {
         let duplicatesMap = Dictionary(grouping: transfers, by: { $0.date.get(.day) } )
+        return duplicatesMap.map {
+            TransferGroup(transfers: $1)
+        }
+    }
+
+    var categoryGroups: [TransferGroup] {
+        let duplicatesMap = Dictionary(grouping: transfers, by: { $0.destination } )
         return duplicatesMap.map {
             TransferGroup(transfers: $1)
         }

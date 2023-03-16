@@ -20,6 +20,7 @@
 		9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4129A8F1F800DD6787 /* TransferCell.swift */; };
 		9F79AB4429A8FBD900DD6787 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4329A8FBD900DD6787 /* DataProvider.swift */; };
 		9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79AB4529A90A9500DD6787 /* TransferDTO.swift */; };
+		9FBCD8D429C36AFE00E25B8E /* SpendingDiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBCD8D329C36AFE00E25B8E /* SpendingDiagramView.swift */; };
 		9FC0B33529BB8CE500AF7F89 /* TransferGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0B33429BB8CE500AF7F89 /* TransferGroup.swift */; };
 		9FE0DDDA29BF42E2006C6DB4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0DDD929BF42E2006C6DB4 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		9F79AB4129A8F1F800DD6787 /* TransferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCell.swift; sourceTree = "<group>"; };
 		9F79AB4329A8FBD900DD6787 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		9F79AB4529A90A9500DD6787 /* TransferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDTO.swift; sourceTree = "<group>"; };
+		9FBCD8D329C36AFE00E25B8E /* SpendingDiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingDiagramView.swift; sourceTree = "<group>"; };
 		9FC0B33429BB8CE500AF7F89 /* TransferGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferGroup.swift; sourceTree = "<group>"; };
 		9FE0DDD929BF42E2006C6DB4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				9F79AB3729A8EE2A00DD6787 /* TransferView.swift */,
 				9F79AB3929A8EE4200DD6787 /* CardsView.swift */,
 				9F79AB4129A8F1F800DD6787 /* TransferCell.swift */,
+				9FBCD8D329C36AFE00E25B8E /* SpendingDiagramView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				9F79AB0E29A8E5FD00DD6787 /* MainTabView.swift in Sources */,
 				9F79AB3A29A8EE4200DD6787 /* CardsView.swift in Sources */,
 				9F79AB4229A8F1F800DD6787 /* TransferCell.swift in Sources */,
+				9FBCD8D429C36AFE00E25B8E /* SpendingDiagramView.swift in Sources */,
 				9FE0DDDA29BF42E2006C6DB4 /* Date+Extensions.swift in Sources */,
 				9F79AB3829A8EE2A00DD6787 /* TransferView.swift in Sources */,
 				9F79AB4629A90A9500DD6787 /* TransferDTO.swift in Sources */,

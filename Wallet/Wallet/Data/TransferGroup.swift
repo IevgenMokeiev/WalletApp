@@ -18,6 +18,10 @@ struct TransferGroup: Comparable {
         return Self.dateFormatter.string(from: date)
     }
 
+    var totalAmount: Double {
+        return transfers.reduce(into: 0.0) { $0 = $0 + $1.amount }
+    }
+
     static func < (lhs: TransferGroup, rhs: TransferGroup) -> Bool {
         return lhs.date < rhs.date
     }
