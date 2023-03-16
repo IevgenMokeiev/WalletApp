@@ -12,16 +12,30 @@ extension Date {
         return calendar.component(component, from: self)
     }
 
-    static func randomDate(dayRange: Range<Int>) -> Date {
+    static func randomDate(
+        month: Int,
+        dayRange: Range<Int>
+    ) -> Date {
         let gregorian = Calendar(identifier: .gregorian)
         let now = Date()
         var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute], from: now)
 
         components.year = 2023
-        components.month = 12
+        components.month = month
         components.day = Int.random(in: dayRange)
         components.hour = Int.random(in: 0..<24)
         components.minute = Int.random(in: 0..<60)
+
+        return gregorian.date(from: components) ?? now
+    }
+
+    static func dateFromMonth(
+        month: Int
+    ) -> Date {
+        let gregorian = Calendar(identifier: .gregorian)
+        let now = Date()
+        var components = gregorian.dateComponents([.month], from: now)
+        components.month = month
 
         return gregorian.date(from: components) ?? now
     }
