@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct SpendingDiagramView: View {
 
@@ -16,12 +17,37 @@ struct SpendingDiagramView: View {
     }
 
     var body: some View {
-        HStack {
-            ForEach(user.categoryGroups.sorted(by: { $0.totalAmount > $1.totalAmount }), id: \.date) { group in
-                Rectangle()
-                    .fill(Color(hue: .random(in: 0...1), saturation: .random(in: 0...1), brightness: .random(in: 0...1)))
-                    .frame(width: group.totalAmount, height: 40)
+        chart
+    }
+
+    private var chart: some View {
+        Chart(user.topCategoryGroups, id: \.destination) { element in
+            Plot {
+                BarMark(
+                    x: .value("Data Size", element.totalAmount)
+                )
+                .foregroundStyle(by: .value("Data Category", element.destination))
             }
         }
+        .chartPlotStyle { plotArea in
+            plotArea
+                .background(Color(.systemFill))
+                .cornerRadius(8)
+        }
+        .chartForegroundStyleScale(range: gradients)
+        .chartXAxis(.hidden)
+        .chartLegend(position: .bottom, spacing: 8)
+        .chartLegend(.visible)
+        .frame(height: 60)
+    }
+
+    private var gradients: [LinearGradient] {
+        return [
+            LinearGradient(colors: [.green, .orange], startPoint: .leading, endPoint: .trailing),
+            LinearGradient(colors: [.orange, .red], startPoint: .leading, endPoint: .trailing),
+            LinearGradient(colors: [.red, .purple], startPoint: .leading, endPoint: .trailing),
+            LinearGradient(colors: [.purple, .blue], startPoint: .leading, endPoint: .trailing),
+            LinearGradient(colors: [.blue, .cyan], startPoint: .leading, endPoint: .trailing),
+        ]
     }
 }

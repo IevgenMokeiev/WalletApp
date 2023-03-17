@@ -30,17 +30,18 @@ class User: ObservableObject {
         }
     }
 
-    var categoryGroups: [TransferGroup] {
-        let duplicatesMap = Dictionary(grouping: transfers, by: { $0.destination } )
-        return duplicatesMap.map {
-            TransferGroup(transfers: $1)
-        }
+    var topCategoryGroups: [TransferGroup] {
+        var sorted = categoryGroups.sorted { $0.totalAmount > $1.totalAmount }
+        return Array(sorted.prefix(5))
+    }
+
+    var totalAmount: Double {
+        return transfers.reduce(into: 0.0) { $0 = $0 + $1.amount }
     }
 
     var formattedTotalAmount: String {
         let formatter = Self.currencyFormatter
         formatter.locale = Locale.autoupdatingCurrent
-        let totalAmount = transfers.reduce(into: 0.0) { $0 = $0 + $1.amount }
 
         return formatter.string(from: totalAmount as NSNumber) ?? ""
     }
@@ -57,6 +58,13 @@ class User: ObservableObject {
     }
 
     // MARK: - Private
+
+    var categoryGroups: [TransferGroup] {
+        let duplicatesMap = Dictionary(grouping: transfers, by: { $0.destination } )
+        return duplicatesMap.map {
+            TransferGroup(transfers: $1)
+        }
+    }
 
     private static var currencyFormatter: NumberFormatter = {
         let formatter = NumberFormatter()

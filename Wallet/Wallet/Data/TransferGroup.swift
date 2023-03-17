@@ -14,6 +14,10 @@ struct TransferGroup: Comparable {
         return transfers.first?.date ?? Date()
     }
 
+    var destination: String {
+        return transfers.first?.destination ?? ""
+    }
+
     var formattedDate: String {
         return Self.dateFormatter.string(from: date)
     }
